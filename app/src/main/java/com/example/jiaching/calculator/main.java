@@ -14,7 +14,7 @@ public class main extends ActionBarActivity  {
         Calculator calculator = Calculator.getInstance();
         calculator.initLayout(getApplicationContext());
         setContentView(calculator.getLayout());
-        calculator.initCalculator();
+
     }
 
 
