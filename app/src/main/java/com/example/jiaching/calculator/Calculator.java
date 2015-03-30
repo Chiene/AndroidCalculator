@@ -11,13 +11,16 @@ import com.example.jiaching.calculator.operatorPackage.PlusOperator;
 import com.example.jiaching.calculator.operatorPackage.Operator;
 import com.example.jiaching.calculator.operatorPackage.MinsOperator;
 
+import java.util.LinkedList;
+
 
 /**
  * Created by JiaChing on 2015/3/21.
  */
 public class Calculator {
     private CalculatorRetLayout calRelativeLayout;
-
+    private String postfixString = "";
+    private int location = 0;
     private static Calculator calculatorInstance = null;
     private Calculator() {
 
@@ -45,8 +48,16 @@ public class Calculator {
     public void initLayout(Context context) {
         calRelativeLayout = new CalculatorRetLayout(context);
     }
+
     public RelativeLayout getLayout() {
+
         return calRelativeLayout;
+    }
+    public void addPostfixString(String addString) {
+        postfixString += postfixString+addString;
+    }
+    public void infixToPostfix() {
+
     }
 
 }

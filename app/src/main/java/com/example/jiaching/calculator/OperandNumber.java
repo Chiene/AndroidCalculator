@@ -28,8 +28,7 @@ public class OperandNumber extends ImageButton implements Button.OnClickListener
 
     @Override
     public void onClick(View v) {
-
-        calculator.setTextViewResult(numberString);
+        calculator.setTextViewResult(calculator.getTextViewText()+numberString);
     }
     public void setNumber(String _number) {
         numberString = _number;

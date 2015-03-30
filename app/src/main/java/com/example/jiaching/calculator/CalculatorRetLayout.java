@@ -19,9 +19,8 @@ public class CalculatorRetLayout extends RelativeLayout {
     private ImageButton imageButtonBackSpace = null;
 
     //Operator
-    private Operator addOperator = null;
-    private Operator subOperator = null;
-    private Operator subOperator = null;
+    private Operator plusOperator = null;
+    private Operator minsOperator = null;
     private Operator multipleOperator = null;
     private Operator dividOperator = null;
     private Operator equalOperator = null;
@@ -43,7 +42,7 @@ public class CalculatorRetLayout extends RelativeLayout {
      */
     public void initTextView() {
         tvShowResult = new TextView(this.getContext());
-        tvShowResult.setText("sdfsdf");
+        tvShowResult.setText("");
         tvShowResult.setWidth(350);
         tvShowResult.setHeight(50);
         tvShowResult.setGravity(Gravity.RIGHT);
@@ -71,19 +70,19 @@ public class CalculatorRetLayout extends RelativeLayout {
         imageButtonBackSpace.setImageResource(R.drawable.back);
         this.addView(imageButtonBackSpace);
         //
-        addOperator = new PlusOperator(this.getContext());
-        addOperator.setX(360);
-        addOperator.setY(70);
-        addOperator.getBackground().setAlpha(0);
-        addOperator.setImageResource(R.drawable.plus);
-        this.addView(addOperator);
+        plusOperator = new PlusOperator(this.getContext());
+        plusOperator.setX(360);
+        plusOperator.setY(70);
+        plusOperator.getBackground().setAlpha(0);
+        plusOperator.setImageResource(R.drawable.plus);
+        this.addView(plusOperator);
 
-        subOperator = new MinsOperator(this.getContext());
-        subOperator.setX(360);
-        subOperator.setY(180);
-        subOperator.getBackground().setAlpha(0);
-        subOperator.setImageResource(R.drawable.minus);
-        this.addView(subOperator);
+        minsOperator = new MinsOperator(this.getContext());
+        minsOperator.setX(360);
+        minsOperator.setY(180);
+        minsOperator.getBackground().setAlpha(0);
+        minsOperator.setImageResource(R.drawable.minus);
+        this.addView(minsOperator);
 
 
     }
